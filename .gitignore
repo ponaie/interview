@@ -1,5 +1,5 @@
-/JZOffer/
-!/JZOffer/*.cpp
-
-/LeetCode/
-!/LeetCode/*.cpp
+*
+!/JZOffer/
+!/LeetCode/
+!*.cpp
+!*.md
