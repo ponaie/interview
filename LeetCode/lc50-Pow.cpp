@@ -26,27 +26,25 @@ using namespace std;
 // }
 
 double myPow(double x, int n) {
-  bool negPow = n < 0 ? true : false;
-  n = abs(n);
+  unsigned int y = n > 0 ? n : -n;
   double res = 1;
-  for (int i = 31; i >= 0; i--) {
-    res = res * res;
-    if (n & (1 << i)) res = res * x;
+  while (y) {
+    if (y & 1) res *= x;
+    x *= x;
+    y = (y >> 1);
   }
-  if (negPow) res = 1 / res;
+  if (n < 0) res = 1 / res;
   return res;
 }
 
 int main() {
-  // int d = 2147483648;
-  // d = -d;
-  // cout << "-d: " << d << endl;
-
   int d = -2147483648;
-  unsigned int ud = d;
-  // cout << "ud: " << ud << endl;
+  unsigned int ud = -d;
+  cout << "ud: " << ud << endl;
+  d = -d;
+  cout << "d: " << d << endl;
   cout << "abs(d): " << abs(d) << endl;
 
-  // cout << myPow(1, -2147483648) << endl;
+  cout << myPow(1, -2147483648) << endl;
   cout << myPow(2.1, 3) << endl;
 }
