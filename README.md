@@ -9,7 +9,7 @@
 | 12.矩阵中的路径       | 79.Word Search                           |
 | 16.数值的整数次方      | 50.Pow(x, n)                             |
 | 18.2.删除链表中的重复节点 | 82.Remove Duplicates from Sorted List II |
-|                 |                                          |
+| 19.正则表达式匹配      | 10.Regular Expression Matching           |
 |                 |                                          |
 |                 |                                          |
 |                 |                                          |
