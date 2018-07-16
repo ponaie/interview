@@ -12,5 +12,13 @@
 | 19.正则表达式匹配      | 10.Regular Expression Matching           |
 |                 |                                          |
 |                 |                                          |
+| 24.反转链表         | 206.Reverse Linked List / 92.Reverse Linked List II |
+| 25.合并两个排序的链表    | 21.MergeTwoSortedLists                   |
+| 26.树的子结构        | 572.Subtree of Another Tree              |
+|                 |                                          |
+|                 |                                          |
+|                 |                                          |
+|                 |                                          |
+|                 |                                          |
 |                 |                                          |
 
