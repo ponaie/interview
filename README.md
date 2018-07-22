@@ -15,10 +15,10 @@
 | 24.反转链表         | 206.Reverse Linked List / 92.Reverse Linked List II |
 | 25.合并两个排序的链表    | 21.MergeTwoSortedLists                   |
 | 26.树的子结构        | 572.Subtree of Another Tree              |
-|                 |                                          |
-|                 |                                          |
-|                 |                                          |
-|                 |                                          |
+| 27.二叉树的镜像       | 226.Invert Binary Tree                   |
+| 28.对称的二叉树       | 101.Symmetric Tree / 226.Invert Binary Tree |
+| 29.顺时针打印矩阵      | 54.Spiral Matrix / 59.Spiral Matrix II   |
+| 30.包含min函数的栈    | 155.Min Stack                            |
 |                 |                                          |
 |                 |                                          |
 
