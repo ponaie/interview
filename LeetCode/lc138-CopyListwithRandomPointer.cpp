@@ -43,4 +43,31 @@ RandomListNode *copyRandomList(RandomListNode *head) {
   return result;
 }
 
+// RandomListNode *copyRandomList(RandomListNode *head) {
+//   if (!head) return NULL;
+//
+//   RandomListNode *result = new RandomListNode(head->label);
+//   RandomListNode *node = result;
+//   RandomListNode *cur = head->next;
+//   map<RandomListNode *, RandomListNode *> m;
+//   m[head] = result;
+//   while (cur) {
+//     RandomListNode *tmp = new RandomListNode(cur->label);
+//     node->next = tmp;
+//     m[cur] = tmp;
+//     node = node->next;
+//     cur = cur->next;
+//   }
+//
+//   node = result;
+//   cur = head;
+//   while (node) {
+//     node->random = m[cur->random];
+//     node = node->next;
+//     cur = cur->next;
+//   }
+//
+//   return result;
+// }
+
 int main() {}
