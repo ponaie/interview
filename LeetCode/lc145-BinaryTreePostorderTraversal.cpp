@@ -18,21 +18,41 @@ struct TreeNode {
 };
 
 vector<int> postorderTraversal(TreeNode* root) {
-  vector<int> result;
-  if (!root) return result;
-
-  stack<TreeNode*> s;
-  s.push(root);
-  TreeNode* tmp;
+  if (!root) return {};
+  vector<int> res;
+  stack<TreeNode*> s{{root}};
+  TreeNode* head = root;
   while (!s.empty()) {
-    tmp = s.top();
-    s.pop();
-    result.insert(result.begin(), tmp->val);
-    if (tmp->left) s.push(tmp->left);
-    if (tmp->right) s.push(tmp->right);
+    TreeNode* t = s.top();
+    if ((!t->left && !t->right) || t->left == head || t->right == head) {
+      res.push_back(t->val);
+      s.pop();
+      head = t;
+
+    } else {
+      if (t->right) s.push(t->right);
+      if (t->left) s.push(t->left);
+    }
   }
-  return result;
+  return res;
 }
+
+// vector<int> postorderTraversal(TreeNode* root) {
+//   vector<int> result;
+//   if (!root) return result;
+//
+//   stack<TreeNode*> s;
+//   s.push(root);
+//   TreeNode* tmp;
+//   while (!s.empty()) {
+//     tmp = s.top();
+//     s.pop();
+//     result.insert(result.begin(), tmp->val);
+//     if (tmp->left) s.push(tmp->left);
+//     if (tmp->right) s.push(tmp->right);
+//   }
+//   return result;
+// }
 
 // vector<int> postorderTraversal(TreeNode* root) {
 //   vector<int> res;
