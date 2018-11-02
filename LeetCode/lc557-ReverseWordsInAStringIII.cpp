@@ -9,6 +9,14 @@
 #include <string>
 using namespace std;
 
+// Python3
+// def reverseWords(self, s):
+//    """
+//    :type s: str
+//    :rtype: str
+//    """
+//    return " ".join(w[::-1] for w in s.split())
+
 string reverseWords(string s) {
   int start = 0, end = 0, n = s.size();
   while (start < n && end < n) {
