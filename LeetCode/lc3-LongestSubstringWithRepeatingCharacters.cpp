@@ -9,6 +9,21 @@
 #include <vector>
 using namespace std;
 
+// int lengthOfLongestSubstring(string s) {
+//   int res = 0;
+//   int l = 0, r = -1;  // 滑动窗口为s[l...r]
+//   vector<int> freq(256);
+//
+//   while (l < s.size()) {
+//     if (r + 1 < s.size() && freq[s[r + 1]] == 0)
+//       freq[s[++r]]++;
+//     else
+//       freq[s[l++]]--;
+//     res = max(res, r - l + 1);
+//   }
+//   return res;
+// }
+
 int lengthOfLongestSubstring(string s) {
   vector<int> m(256, -1);
   int result = 0, left = -1;
