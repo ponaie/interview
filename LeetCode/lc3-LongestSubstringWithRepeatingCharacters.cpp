@@ -26,7 +26,7 @@ using namespace std;
 
 int lengthOfLongestSubstring(string s) {
   vector<int> m(256, -1);
-  int result = 0, left = -1;
+  int result = 0, left = -1; // 滑动窗口为s(l...r]
 
   for (int i = 0; i < s.size(); ++i) {
     left = max(left, m[s[i]]);
