@@ -15,26 +15,43 @@ struct ListNode {
   ListNode(int x) : val(x), next(NULL) {}
 };
 
-// Given n will alway be valid.
 ListNode* removeNthFromEnd(ListNode* head, int n) {
   ListNode dummy = ListNode(0);
   dummy.next = head;
-  ListNode *forward, *current, *tmp;
-  forward = current = &dummy;
+  ListNode *pre = &dummy, *fast = &dummy;
 
-  while (n && forward->next) {
-    forward = forward->next;
-    --n;
+  for (int i = 0; i < n; ++i) fast = fast->next;
+  while (fast->next) {
+    fast = fast->next;
+    pre = pre->next;
   }
-  while (forward->next) {
-    forward = forward->next;
-    current = current->next;
-  }
-  tmp = current->next;
-  current->next = tmp->next;
+  ListNode* tmp = pre->next;
+  pre->next = tmp->next;
   delete tmp;
 
   return dummy.next;
 }
+
+// Given n will alway be valid.
+// ListNode* removeNthFromEnd(ListNode* head, int n) {
+//   ListNode dummy = ListNode(0);
+//   dummy.next = head;
+//   ListNode *forward, *current, *tmp;
+//   forward = current = &dummy;
+//
+//   while (n && forward->next) {
+//     forward = forward->next;
+//     --n;
+//   }
+//   while (forward->next) {
+//     forward = forward->next;
+//     current = current->next;
+//   }
+//   tmp = current->next;
+//   current->next = tmp->next;
+//   delete tmp;
+//
+//   return dummy.next;
+// }
 
 int main() {}
