@@ -11,12 +11,14 @@
 #include <vector>
 using namespace std;
 
+// O(nlogk)
 vector<int> topKFrequent(vector<int>& nums, int k) {
   unordered_map<int, int> m;
   for (int n : nums) ++m[n];
 
   priority_queue<pair<int, int>, vector<pair<int, int>>,
-                 std::greater<pair<int, int>>> pq;
+                 std::greater<pair<int, int>>>
+      pq;
   for (auto p : m) {
     if (pq.size() == k) {
       if (p.second > pq.top().first) {
@@ -35,5 +37,23 @@ vector<int> topKFrequent(vector<int>& nums, int k) {
   }
   return res;
 }
+
+// O(nlog(n-k))
+// vector<int> topKFrequent(vector<int>& nums, int k) {
+//   unordered_map<int, int> map;
+//   for (int num : nums) map[num]++;
+//
+//   vector<int> res;
+//   // pair<first, second>: first is frequency,  second is number
+//   priority_queue<pair<int, int>> pq;
+//   for (auto it = map.begin(); it != map.end(); it++) {
+//     pq.push(make_pair(it->second, it->first));
+//     if (pq.size() > (int)map.size() - k) {
+//       res.push_back(pq.top().second);
+//       pq.pop();
+//     }
+//   }
+//   return res;
+// }
 
 int main() {}
