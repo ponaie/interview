@@ -23,6 +23,9 @@ bool isMirror(TreeNode* s, TreeNode* t) {
          isMirror(s->right, t->left);
 }
 
-bool isSymmetric(TreeNode* root) { return isMirror(root, root); }
+bool isSymmetric(TreeNode* root) {
+  if (!root) return true;
+  return isMirror(root->left, root->right);
+}
 
 int main() {}
