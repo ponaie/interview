@@ -4,7 +4,7 @@
 
 | 剑指Offer                     | LeetCode                                                     |
 | :---------------------------- | :----------------------------------------------------------- |
-| 10.斐波那契数列               |                                                              |
+| 10.斐波那契数列               | 70. Climbing Stairs                                          |
 | 11.旋转数组的最小数字         | 153.Find Minimum in Rotated Sorted Array<br>154. Find Minimum in Rotated Sorted Array II |
 | 12.矩阵中的路径               | 79.Word Search                                               |
 | 16.数值的整数次方             | 50.Pow(x, n)                                                 |
