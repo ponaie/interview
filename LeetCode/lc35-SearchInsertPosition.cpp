@@ -10,18 +10,32 @@
 using namespace std;
 
 int searchInsert(vector<int>& nums, int target) {
-  if (nums.back() < target) return nums.size();
-  int left = 0, right = nums.size() - 1;
-  while (left < right) {
-    int mid = left + (right - left) / 2;
+  int beg = 0, end = nums.size() - 1, mid;
+  while (beg <= end) {
+    mid = beg + (end - beg) / 2;
     if (nums[mid] == target)
       return mid;
-    else if (nums[mid] < target)
-      left = mid + 1;
+    else if (nums[mid] > target)
+      end = mid - 1;
     else
-      right = mid;
+      beg = mid + 1;
   }
-  return right;
+  return beg;
 }
+
+// int searchInsert(vector<int>& nums, int target) {
+//   if (nums.back() < target) return nums.size();
+//   int left = 0, right = nums.size() - 1;
+//   while (left < right) {
+//     int mid = left + (right - left) / 2;
+//     if (nums[mid] == target)
+//       return mid;
+//     else if (nums[mid] < target)
+//       left = mid + 1;
+//     else
+//       right = mid;
+//   }
+//   return right;
+// }
 
 int main() {}
